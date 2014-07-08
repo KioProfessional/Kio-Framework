@@ -1,0 +1,12 @@
+; A kiosetup code
+KioSetupFileExtension = ".kiosetup"
+when KioSetupFileExtension_ValidExtension[] do
+Validate[Framework;GetFile]
+Object.CreateNew[C:\Desktop\Kio-FrameworkVerify, "FrameworkVerify"]
+FrameworkVerify_extension[".bat"]
+FrameworkVerify_source[(
+"connect Kio-Framework
+console install Kio
+-R -Q console[kio]"
+)]
+end[when]
